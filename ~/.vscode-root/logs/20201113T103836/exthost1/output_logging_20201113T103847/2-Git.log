@@ -47,3 +47,40 @@ Use '--' to separate paths from revisions, like this:
 > git for-each-ref --sort -committerdate --format %(refname) %(objectname)
 > git remote --verbose
 > git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git ls-files --stage -- /home/junho/Desktop/mthread/.gitignore
+> git cat-file -s b10bf162d8fa9f3b1076d39d46147785e82cc575
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git show --textconv :.gitignore
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :README.md
+> git ls-files --stage -- /home/junho/Desktop/mthread/README.md
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git config --get commit.template
+> git show --textconv :mscheduler.c
+> git ls-files --stage -- /home/junho/Desktop/mthread/mscheduler.c
+> git cat-file -s 8e2176bd004503f538f90886b24fb856f183d1d3
+> git show --textconv :mscheduler.h
+> git ls-files --stage -- /home/junho/Desktop/mthread/mscheduler.h
+> git cat-file -s e5a3f57a6924ef66375e08912730f34d97c85422
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/junho/Desktop/mthread/mthread.h.gch
+> git show --textconv :mthread.h
+> git ls-files --stage -- /home/junho/Desktop/mthread/mthread.h
+> git cat-file -s a93f0b17f03272a13b1bebf047ddae72bcb56fff
+> git show --textconv :queue.h
+> git ls-files --stage -- /home/junho/Desktop/mthread/queue.h
+> git cat-file -s 620e986f7e834c4d4f84d0cc1b31e3988b0bd43a
+> git show --textconv :README.md
+> git ls-files --stage -- /home/junho/Desktop/mthread/README.md
