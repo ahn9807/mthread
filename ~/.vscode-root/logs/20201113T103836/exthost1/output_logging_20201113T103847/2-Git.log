@@ -84,3 +84,14 @@ fatal: no upstream configured for branch 'master'
 > git cat-file -s 620e986f7e834c4d4f84d0cc1b31e3988b0bd43a
 > git show --textconv :README.md
 > git ls-files --stage -- /home/junho/Desktop/mthread/README.md
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git ls-files --stage -- /home/junho/Desktop/mthread/README.md
+> git rev-parse master
+> git cat-file -s e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname)
+> git remote --verbose
+> git show --textconv :README.md
+> git config --get commit.template
