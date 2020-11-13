@@ -20,8 +20,9 @@ typedef struct _mthread_tcb {
     mthread_t tid;
     void* stack;
     void* return_value;
-    struct _mthread_tcb* next_thread;
-    struct _mthread_tcb* prev_thread;
+    struct _mthread_tcb* parent_thread;
+    queue_t* child_threads;
+    
 } mthread_tcb_t;
 
 queue_t* running_queue; //unused

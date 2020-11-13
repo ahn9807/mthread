@@ -1,6 +1,7 @@
 /**
  * Implementing 
  * 1 vs all user thread
+ * Implemented by junho ahn by NOV 13 2020
  */
 #include "mthread.h"
 #include "queue.h"
@@ -37,8 +38,6 @@ int mthread_create(mthread_t* thread, void(*func)(void*), void* arg) {
     ucontext_t* cnt = malloc(sizeof(ucontext_t));
     void* sp = malloc(MAX_STACK_SIZE);
 
-    printf("Stack pointer %p\n", sp);
-
     if(tcb == NULL || cnt == NULL || sp == NULL) {
         free(tcb);
         free(cnt);
@@ -58,6 +57,14 @@ int mthread_create(mthread_t* thread, void(*func)(void*), void* arg) {
     tcb->tid = tid++;
     tcb->context = cnt;
     tcb->stack = sp;
+    tcb->parent_thread = mthread_current();
+    if(mthread_current() != NULL) {
+       if(mthread_current()->child_threads == NULL) {
+           mthread_current()->child_threads = malloc(sizeof(queue_t));
+       }
+
+        insert_head(mthread_current()->child_threads, tcb);
+    }
 
     makecontext(cnt, (void (*)(void))mthread_wrapper, 2, func, arg);
 
@@ -91,13 +98,14 @@ int mthread_yield() {
 }
 
 int mthread_join(mthread_t th, void **thread_return) {
-    node_t* iter = terminated_queue->head;
+    node_t* iter = mthread_current()->child_threads->head;
+
     while(iter != NULL) {
         if(((mthread_tcb_t*)iter->data)->tid == th) {
-            *thread_return = ((mthread_tcb_t*)iter->data)->return_value;
-            remove_head(terminated_queue);
             return 0;
         }
+
+        iter = iter->prev_node;
     }
 
     mthread_yield();
