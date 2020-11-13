@@ -1,8 +1,8 @@
 {
    "bvX4PpTCW5oYCQv3FySIixdkmM+paN/l+o4e/8K1m3o=": {
-      "expiry": 1636786204.299658,
+      "expiry": 1636805193.417411,
       "mode": "force-https",
       "sts_include_subdomains": true,
-      "sts_observed": 1605250204.299661
+      "sts_observed": 1605269193.417414
    }
 }

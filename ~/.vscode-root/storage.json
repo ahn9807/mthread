@@ -2,6 +2,7 @@
     "telemetry.machineId": "90c9dc8bd48670112079e1462d9e6266bacf111671b11a5271e87374dea96651",
     "openedPathsList": {
         "workspaces3": [
+            "file:///home/junho/Desktop/proj3",
             "file:///home/junho/Desktop/mthread"
         ],
         "files2": []
@@ -50,7 +51,18 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/home/junho/Desktop/mthread",
+                                        "fsPath": "/home/junho/Desktop/proj3",
+                                        "external": "file:///home/junho/Desktop/proj3",
+                                        "path": "/home/junho/Desktop/proj3",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/home/junho/Desktop/proj3"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/junho/Desktop/mthread",
                                         "path": "/home/junho/Desktop/mthread",
                                         "scheme": "file"
@@ -99,7 +111,8 @@
                     },
                     {
                         "id": "workbench.action.files.saveAll",
-                        "label": "Save A&&ll"
+                        "label": "Save A&&ll",
+                        "enabled": false
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -397,7 +410,8 @@
                                 },
                                 {
                                     "id": "workbench.action.togglePanel",
-                                    "label": "Show &&Panel"
+                                    "label": "Show &&Panel",
+                                    "checked": true
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -897,8 +911,7 @@
                     },
                     {
                         "id": "workbench.action.terminal.split",
-                        "label": "&&Split Terminal",
-                        "enabled": false
+                        "label": "&&Split Terminal"
                     },
                     {
                         "id": "vscode.menubar.separator"
@@ -1461,14 +1474,14 @@
     "themeBackground": "#1e1e1e",
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/junho/Desktop/mthread",
-            "backupPath": "/home/junho/Desktop/mthread/~/.vscode-root/Backups/db3678b87222cb7beae9af1f504053da",
+            "folder": "file:///home/junho/Desktop/proj3",
+            "backupPath": "/home/junho/Desktop/mthread/~/.vscode-root/Backups/abd595640133eb792fb375d858f1838d",
             "uiState": {
-                "mode": 0,
-                "x": 87,
+                "mode": 1,
+                "x": 523,
                 "y": 64,
-                "width": 1024,
-                "height": 768
+                "width": 1397,
+                "height": 1174
             }
         },
         "openedWindows": []

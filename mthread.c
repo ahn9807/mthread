@@ -87,6 +87,7 @@ void mthread_exit(void* retval) {
 
     free(current_t->stack);
     free(current_t->context);
+    destory(current_t->child_threads);
 
     insert_head(terminated_queue, current_t);
 
